@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--FINAL HACK YOUR TOMMOROW PROJECT(CORE CONNECT)-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Connect</title>
+    <link rel="stylesheet" href="CSS Files/testAesthetic.css">
+</head>
+<!-- ali test -->   
+<body onload="document.body.style.opacity='1'">
+<!-- end test -->
+    <!--================FIREBASE=====================-->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+
+    <!--================FIREBASE CONFIG======================-->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB_1KmgoePsKrqoa4km9_G5dDmwq8c13F4",
+            authDomain: "hack-your-tomorrow.firebaseapp.com",
+            databaseURL: "https://hack-your-tomorrow-default-rtdb.firebaseio.com",
+            projectId: "hack-your-tomorrow",
+            storageBucket: "hack-your-tomorrow.appspot.com",
+            messagingSenderId: "425722643164",
+            appId: "1:425722643164:web:d3348f26202d9eabd52a19",
+            measurementId: "G-GPPXPWEF6K"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+    </script>
+
+
+    <!--<input id ='fileInput' type = 'file'>-->
+<div class="logoDiv">
+<img id="logo" src ='CSS Files/Core Connect Logo.png'>
+<h1 id="logoTitle">Core Connect</h1>
+</div>
+    <div id='registerDiv'>
+        <p id = 'registerTxt'>Register</p>
+        <input class='logInput' type='text' id='name' placeholder="Name"><br><br>
+        <input  class='logInput'type='text' id='username' placeholder='Username' ><br><br>
+        <input  class='logInput' type='password' id='password' placeholder="Password" ><br><br>
+        <input class='logInput' type='password' id='confirmPassword' placeholder="Confirm Password"><br><br><br><br>
+        <select id = 'langDrop'>
+            <option id = 'langOption'>Language</option>
+            <option id = 'EN-US'>English</option>
+            <option id ='FR'>Français</option>
+            <option id = 'ES'>Español</option>
+            <option id = 'IT'>Italiano</option>
+            <option id = 'JA'>日本</option>
+            <option id = 'DE'>Deutsch</option>
+        </select>
+        <button class = 'signUpIn' id='register'>Register</button><br><br>
+        <button class= 'swapBtn' id='toSignIn'>Already Have An Account? Sign In</button>
+    </div>
+    <!--Register-->
+
+    <div id='signInDiv'>
+        <p id = 'signInTxt'>Sign In</p>
+        <input class='logInput' type='text' id='logInUsername' placeholder='Username' /><br><br>
+        <input class='logInput' type='password' id='logInPassword' placeholder="Password" /><br><br>
+        <button class = 'signUpIn' id='signIn'>Sign In</button><br><br>
+        <button class= 'swapBtn' id='toRegister'>Don't Have An Account? Register Here</button>
+        <select id = 'langUpdateSignIn'>
+            <option id = 'option'>Language</option>
+            <option>English</option>
+            <option>Français</option>
+            <option>Español</option>
+            <option>Italiano</option>
+            <option>日本</option>
+            <option>Deutsch</option>
+        </select>
+        <button id="updateSignIn">=></button>
+    </div>
+    <!--Sign in-->
+
+    <div id='userSearchDiv'>
+        <input id='search' placeholder='Search Username'>
+        <button id='searchBtn'>Search</button>
+        <button id = 'signOut'>Sign Out</button>
+
+        <div id='yourFriendsDiv'>
+        <p class ='friendTextDisplay' id ='friendText'>Your Friends</p>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p class ='friendTextDisplay' id = 'incomingReq'>Incoming Friend Requests</p>
+
+    </div>
+
+    <div id = 'chatItems'>
+    <button id='back'>Back</button><input id='sendMsg' placeholder="message"><button id = 'sendBtn'>Send</button>
+    <div id='chatDiv'>  
+        
+    </div>
+</div>
+
+    <!--============SCRIPT FILE LINK==================-->
+    <script src="JS Files/Encript.js"></script>
+    <script src='JS Files/Register.js'></script>
+    <script src='JS Files/SignIn.js'></script>
+    <script src='JS Files/main.js'></script>
+    <script src='JS Files/userSearch.js'></script>
+    <script src = 'JS Files/sendMsg.js'></script>
+    <script src = 'JS Files/translateFunction.js'></script>
+
+
+
+
+</body>
+
+</html>
